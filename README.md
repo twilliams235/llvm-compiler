@@ -8,19 +8,6 @@ A small LLVM tool that adds **software fault-tolerance (SWFT)** and **checks con
 
 - **CFG checks:** assigns each basic block an ID and inserts checks so branches land where they should.
 
-## Build
-```LLVM_CONFIG=llvm-config```
-
-```CXX=$($LLVM_CONFIG --cxx)```
-
-```CXXFLAGS="$($LLVM_CONFIG --cxxflags) -O2"```
-
-```LDFLAGS="$($LLVM_CONFIG --ldflags --libs core irreader bitreader```
-
-```bitwriter passes analysis transformutils support)"```
-
-```$CXX $CXXFLAGS -o swft-pass p3.cpp $LDFLAGS```
-
 ## Use
 1) Make bitcode from C
 
